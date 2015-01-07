@@ -18,8 +18,10 @@ if(vToday){
 				vClockArray = vTextArray[1].split(":"),
 				vHours = +vClockArray[0],
 				vMinutes = +vClockArray[1];
-			if(vTextArray[2] === "PM" && vHours != 12){
-				vHours += 12;
+			if(vTextArray[2] === "PM"){
+				if(vHours != 12){
+					vHours += 12;
+				}
 			}else if(vHours === 12){
 				vHours = 0;
 			}
